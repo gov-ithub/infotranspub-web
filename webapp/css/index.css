@@ -1,0 +1,50 @@
+html,
+body {
+/*css for full size background image*/
+  background: url(../img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+ 
+}
+
+.select2-container .select2-choice, .select2-result-label {
+  font-size: 1.5em;
+  height: 45px; 
+  overflow: auto;
+}
+
+.top-search {
+  margin-top: 90px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.search-field-wrap {
+  margin-top: 30px;
+}
+
+.search-btn-wrap {
+  margin-left: 10%; 
+  margin-right: 10%;
+  margin-top: 60px;
+}
+
+
+.icon-padding{
+  margin-left: 20px;
+}
+
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}

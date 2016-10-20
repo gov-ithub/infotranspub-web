@@ -75,7 +75,7 @@ ul.experiences li {
 
 ul.experiences li.red:after {
     /* bullets */
-    content: url('img/red.png');
+    content: url('../img/bullet-red.png');
     position: absolute;
     left: -26px; /*adjust manually*/
     top: 0px;
@@ -83,7 +83,7 @@ ul.experiences li.red:after {
 
 ul.experiences li.green:after {
     /* bullets */
-    content: url('img/green.png');
+    content: url('../img/bullet-green.png');
     position: absolute;
     left: -26px; /*adjust manually*/
     top: 0px;
@@ -91,11 +91,20 @@ ul.experiences li.green:after {
 
 ul.experiences li.blue:after {
     /* bullets */
-    content: url('img/p.png');
+    content: url('../img/bullet-blue.png');
     position: absolute;
     left: -26px; /*adjust manually*/
     top: 0px;
 }
+
+ul.experiences li.details:after {
+    /* bullets */
+    content: url('../img/bullet-details.png');
+    position: absolute;
+    left: -26px; /*adjust manually*/
+    top: 0px;
+}
+
 
 ul.experiences li:before {
     /* lines */
@@ -119,11 +128,8 @@ ul.experiences li:last-child:before {
 
 .route{ 
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    display: block;
-    margin-right: 15%;
-    width:20%;
-    margin-top: 100px;
-    float: right;
+    margin-top: 50px;
+
 }
 
 .leftImages {
@@ -134,11 +140,6 @@ ul.experiences li:last-child:before {
     margin-left: 5%;
 }
 
-.routeInfo {
-       display: block;
-    float: left;
-    height: 30px;
-    margin-top: 30%;
-    
-     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+.routeInfo {    
+     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;     
 }
