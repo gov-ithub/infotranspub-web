@@ -4,12 +4,12 @@ var selectStop = "Până la";
 
 
 $( document ).ready(function() { 
-	for(var i =0;i<stationData.stationList.length;i++)
-	{
-		$("#option-group-from").append('<option value="'+stationData.stationList[i].stationId+'">'+stationData.stationList[i].name+'</option>');	
-		$("#option-group-to").append('<option value="'+stationData.stationList[i].stationId+'">'+stationData.stationList[i].name+'</option>');
-	}
-	
+	$.each(stationData.stationList,function(i,station) {
+		var option = $('<option>',{
+			value:station.stationId,
+			text:station.name
+		});	
+		$("#option-group-from,#option-group-to").append(option);
 });
 
 
@@ -18,12 +18,12 @@ $( ".select-to" ).select2( { placeholder: selectStop } )
 
 
 $('#searchBtn').on('click', function (e) {
-	var fromId = $("#select-search-from").select2("val");
-	var toId = $("#select-search-to").select2("val");
+	var fromId =  parseInt($("#select-search-from").select2("val"));
+	var toId =  parseInt($("#select-search-to").select2("val"));
 
-	if(!isNaN(toId) && !isNaN(fromId) && parseInt(fromId) != parseInt(toId))
+	if(fromId != toId)
 	{		
-		window.location.href = "results.html?toId="+parseInt(toId)+"&fromId="+parseInt(fromId);
+		window.location.href = "results.html?toId="+toId+"&fromId="+fromId;
 	}
 
 })
