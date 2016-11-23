@@ -21,7 +21,7 @@ $('#searchBtn').on('click', function (e) {
 	var fromId =  parseInt($("#select-search-from").select2("val"));
 	var toId =  parseInt($("#select-search-to").select2("val"));
 
-	if(fromId != toId)
+	if(!isNaN(toId) && !isNaN(fromId) && fromId != toId)
 	{		
 		window.location.href = "results.html?toId="+toId+"&fromId="+fromId;
 	}
