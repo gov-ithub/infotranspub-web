@@ -85,13 +85,18 @@ function getData (fromId,toId,stations) {
 				}
 				//se va modifica pentru a returna resultatele respectiv erorile
 				$(".experiences").empty();
+				var total = 0;
 				$.each(routes,function(i,route) {
+				if (i < routes.length-1) {
+					total+=parseInt(route.durations.duration);
+				};
 				if (route.error) {
 					var li = '<li>Nu s-au gasit rute pentru aceste locatii</li>';
 				} else {
 					var li = '<li><div class="where">'+route.name+'</div><p class="description">'+route.durations.duration+' min</p></li>';	
 				}
 				$(".experiences").append(li);
+				$(".total > span").text(total);
 				});
 				
 			}

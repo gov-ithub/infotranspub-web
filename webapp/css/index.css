@@ -200,3 +200,6 @@ ul.experiences li:last-child .description {
   background: rgba(255,255,255,.9);
   color: #000;
 }
+.total {
+  margin-bottom: 20px;
+}
