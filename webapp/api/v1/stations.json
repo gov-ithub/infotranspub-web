@@ -1,4 +1,4 @@
-var stationData = {
+{
 	"stationList":	[
 		{"name":"BUCUR OBOR", "stationId":1},
 		{"name":"HALELE OBOR", "stationId":2},
@@ -18,4 +18,4 @@ var stationData = {
 		{"name":"BD. 1 DECEMBRIE", "stationId":16},
 		{"name":"COMPLEX COMERCIAL TITAN", "stationId":17},
 		{"name":"FAUR", "stationId":18}]
-};
+}
