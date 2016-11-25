@@ -8,7 +8,6 @@ body {
   background-size: cover;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
  
 }
 
@@ -20,8 +19,6 @@ body {
 
 .top-search {
   margin-top: 90px;
-  margin-left: 15%;
-  margin-right: 15%;
 }
 
 .search-field-wrap {
@@ -29,8 +26,6 @@ body {
 }
 
 .search-btn-wrap {
-  margin-left: 10%; 
-  margin-right: 10%;
   margin-top: 60px;
 }
 
@@ -41,10 +36,167 @@ body {
 
 
 .footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 60px;
   left: 0;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
+}
+/* Experiences */
+ul.experiences {
+    padding-left: 15px;
+    margin-top: -1px;
+}
+
+ul.experiences li {
+    padding-left: 33px;
+    margin-bottom: 2.5em;
+    list-style: none;
+    /*background: url('../img/misc/list-bullet-darkgray.png') no-repeat;*/
+}
+/*
+ul.experiences li.green {
+    background: url('../img/misc/list-bullet-green.png') no-repeat;
+}
+ul.experiences li.blue {
+    background: url('../img/misc/list-bullet-blue.png') no-repeat;
+}
+ul.experiences li.pink {
+    background: url('../img/misc/list-bullet-pink.png') no-repeat;
+}*/
+.where {
+    font-size: 1.2857em; /* 18/16 -> 18px */
+    font-weight: 300;
+    display: inline;
+    margin-right: 0.5em;
+}
+.what {
+    font-size: 0.75em; /* 12/16 -> 12px */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #BBBBBB;
+    display: inline-block;
+    padding: 0 12px;
+    margin: -5px 0.5em 0 0 !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.what.green {
+    background-color: #c4df9b;
+}
+.what.blue {
+    background-color: #6dcff6;
+}
+.what.pink {
+    background-color: #f06eaa;
+}
+.when {
+    float: right;
+    color: #b9b9b9;
+    font-style: italic;
+}
+.description {
+    display: block;
+    margin-top: 0.5em;
+}
+
+
+/* BORDERS AND BULLETS */
+
+p {
+    /*CSS reset*/
+    margin-bottom: 0;
+}
+
+ul.experiences li {
+    position:relative; /* so that pseudoelements are positioned relatively to their "li"s*/
+    /* use padding-bottom instead of margin-bottom.*/ 
+    margin-bottom: 0; /* This overrides previously specified margin-bottom */
+    margin-left: 50px;
+    padding-bottom: 2.5em;
+    text-align: left;
+}
+
+ul.experiences li:last-child:after {
+    /* bullets */
+    content: url('../img/bullet-red.png');
+
+    position: absolute;
+    left: -26px; /*adjust manually*/
+    top: 0px;
+}
+
+ul.experiences li:first-child:after {
+    /* bullets */
+    content: url('../img/bullet-green.png');
+    position: absolute;
+    left: -26px; /*adjust manually*/
+    top: 0px;
+}
+
+ul.experiences li:after {
+    /* bullets */
+    content: url('../img/bullet-blue.png');
+    position: absolute;
+    left: -26px; /*adjust manually*/
+    top: 0px;
+}
+
+ul.experiences li.details:after {
+    /* bullets */
+    content: url('../img/bullet-details.png');
+    position: absolute;
+    left: -26px; /*adjust manually*/
+    top: 0px;
+}
+
+
+ul.experiences li:before {
+    /* lines */
+    content:"";
+    position: absolute;
+    left: -16px; /* adjust manually */
+    border-left: 1px solid black;
+    height: 100%;
+    width: 1px;
+}
+
+ul.experiences li:first-child:before {
+   /* first li's line */
+   top: 6px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+}
+
+ul.experiences li:last-child:before {
+    /* last li's line */
+   height: 6px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+}
+ul.experiences li:last-child .description {
+  display: none;
+}
+.route{ 
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-top: 50px;
+
+}
+
+.leftImages {
+    
+    display: block;
+    float: left;
+    margin-top:100px;
+    margin-left: 5%;
+}
+
+.routeInfo {    
+     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;     
+}
+.results {
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 80px;
+  background: rgba(255,255,255,.9);
+  color: #000;
 }
